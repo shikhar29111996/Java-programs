@@ -1,5 +1,5 @@
 import java.io.*;
-public class transpose
+public class columnsum
 {
 public void func()throws IOException
 {
@@ -17,21 +17,14 @@ System.out.println("Enter the "+i+j+"no.");
 A[i][j]=Integer.parseInt(br.readLine());
 }
 }
-int b[][]=new int[c][r];
 for(i=0;i<c;i++)
 {
+s=0;
 for(j=0;j<r;j++)
 {
-b[i][j]=A[j][i];
+s=s+A[j][i];
 }
-}
-for(i=0;i<c;i++)
-{
-for(j=0;j<r;j++)
-{
-System.out.print(b[i][j]+" ");
-}
-System.out.println();
+System.out.println("sum of column"+j+"="+s);
 }
 }
 }

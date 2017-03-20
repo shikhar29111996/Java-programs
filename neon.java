@@ -1,26 +1,19 @@
-import java.io.*;
 class neon
 {
-public void shikhar(int a)
+void get(int n)
 {
-int n,s=0,c;
-n=a*a;
-while(n!=0)
+int s,a,sum;
+s=n*n;
+sum=0;
+while(s!=0)
 {
-c=n%10;
-s=s+c;
-n=n/10;
+a=s%10;
+sum=sum+a;
+s=s/10;
 }
-if(s==a)
-System.out.println(a+" is a neon number");
+if(sum==n)
+System.out.println("neon");
 else
-System.out.println(a+" is not a neon number");
-}
-public static void main()throws IOException
-{
-neon r=new neon();
-BufferedReader dr=new BufferedReader(new InputStreamReader(System.in));
-for(int i=1;i<=100;i++)
-r.shikhar(i);
+System.out.println("not");
 }
 }

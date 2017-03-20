@@ -1,9 +1,9 @@
 import java.io.*;
-public class transpose
+class halfff
 {
 public void func()throws IOException
 {
-int r,c,i,j,s=0;
+int r,c,i,j,s=0,sum=0;
 BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 System.out.println("Enter the rows & columns");
 r=Integer.parseInt(br.readLine());
@@ -17,21 +17,29 @@ System.out.println("Enter the "+i+j+"no.");
 A[i][j]=Integer.parseInt(br.readLine());
 }
 }
-int b[][]=new int[c][r];
-for(i=0;i<c;i++)
+for(i=0;i<r;i++)
 {
-for(j=0;j<r;j++)
+for(j=0;j<c;j++)
 {
-b[i][j]=A[j][i];
-}
-}
-for(i=0;i<c;i++)
+if(i==j)
 {
-for(j=0;j<r;j++)
+if(j<c-1)
 {
-System.out.print(b[i][j]+" ");
+System.out.println("upper half");
+for(int k=j+1;k<c;k++)
+System.out.print(A[i][k]+" ");
 }
 System.out.println();
+if(j>0)
+{
+System.out.println("lower half");
+for(int l=0;l<j;l++)
+{
+System.out.print(A[i][l]+" ");
+}
+}
+}
+}
 }
 }
 }

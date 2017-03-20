@@ -1,9 +1,9 @@
 import java.io.*;
-public class transpose
+public class rightdigonal
 {
 public void func()throws IOException
 {
-int r,c,i,j,s=0;
+int r,c,i,j,s=0,sum=0;
 BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 System.out.println("Enter the rows & columns");
 r=Integer.parseInt(br.readLine());
@@ -17,21 +17,22 @@ System.out.println("Enter the "+i+j+"no.");
 A[i][j]=Integer.parseInt(br.readLine());
 }
 }
-int b[][]=new int[c][r];
-for(i=0;i<c;i++)
+if(r==c)
 {
-for(j=0;j<r;j++)
+for(i=0;i<r;i++)
+{s=0;
+for(j=0;j<c;j++)
 {
-b[i][j]=A[j][i];
+s=i+j;
+if(s==c-1)
+{
+sum=sum+A[i][j];
 }
 }
-for(i=0;i<c;i++)
-{
-for(j=0;j<r;j++)
-{
-System.out.print(b[i][j]+" ");
 }
-System.out.println();
+System.out.println("The sum of right diagonal is ="+sum);
 }
+else
+System.out.println("The matrix is not a square matrix");
 }
 }

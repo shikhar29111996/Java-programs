@@ -1,50 +1,27 @@
-import java.util.*;
-class date1
+import java.io.*;
+public class date1
 {
-int d,m,y,f=0;
-String date;
-int monthleap[]={31,29,31,30,31,30,31,31,30,31,30,31};
-int monthnormal[]={31,28,31,30,31,30,31,31,30,31,30,31};
-public void input()
+public void get()throws IOException
 {
-Scanner sc=new Scanner(System.in);
-System.out.println("enter the date in dd/mm/yyyy");
-date=sc.next();
-}
-public void extract()
-{
-StringTokenizer st=new StringTokenizer(date,"/");
-d=Integer.parseInt(st.nextToken());
-m=Integer.parseInt(st.nextToken());
-y=Integer.parseInt(st.nextToken());
-}
-public void validity()
-{
-if(y!=0)
-{
-if(m<=12&&m>0)
-{
+int s=0,x=0,d=0,di=0,sum=0;
+int a[]={31,x,31,30,31,30,31,31,30,31,30,31} ;
+
+BufferedReader br=new BufferedReader(new InputStreamReader (System.in));
+System.out.println("Enter two dates and then two month of o similar year by pressing enter ");
+int d1=Integer.parseInt(br.readLine());
+int m=Integer.parseInt(br.readLine());
+int y=Integer.parseInt(br.readLine());
+int d2=Integer.parseInt(br.readLine());
+int m1=Integer.parseInt(br.readLine());
 if(y%4==0)
-{
-if(d<=monthleap[m-1])
-f=1;
-}
-else if(y%4!=0)
-{
-if(d<=monthnormal[m-1])
-f=1;
-}
-}
-}
-if(f==1)
-System.out.println("the date is valid");
-else
-System.out.println("the date is not valid");
-}
-public void main()
-{
-input();
-extract();
-validity();
+x=29;
+else 
+x=28;
+for(int j=m;j<m1;j++)
+s=s+a[j];
+d=a[m-1]-d1;
+sum=s+d+d2-1;
+System.out.println("difference ="+sum);
 }
 }
+
