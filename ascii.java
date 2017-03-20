@@ -1,10 +1,9 @@
-
 class ascii
 {
-void get(char ch)
+public static void main(char ch)
 {
 int a;
 a=(int)ch;
-System.out.print("ascii value"+a);
+System.out.println(a);
 }
 }

@@ -1,35 +1,24 @@
 import java.io.*;
-public class string_search
+class string_search
 {
-public void func()throws IOException
+public static void main()throws IOException
 {
-int n,c,i,f=0,l=0,u=0,m=0,z;
-BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-System.out.println("Enter the limit");
-n=Integer.parseInt(br.readLine());
-u=n-1;
-String a[]=new String[n];
-for(i=0;i<n;i++)
-{
+int i,l=0,u,m=0,f=0,s=0;
+BufferedReader dr=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Enter limit of names");
+u=Integer.parseInt(dr.readLine());
+String a[]=new String[u],c;
 System.out.println("Enter the names");
-a[i]=br.readLine();
-}
+for(i=0;i<u;i++)
+a[i]=dr.readLine();
 System.out.println("Enter the name to be searched");
-String b=br.readLine();
-String xy="shivam";
-z=(b.compareTo(xy));
-if(z==0)
-{
-System.out.println("Element found at index 6");
-System.exit(0);
-}
+c=dr.readLine();
 while(l<=u)
 {
 m=(l+u)/2;
-z=(b.compareTo(a[m]));
-if(z>0)
+if(c.compareTo(a[m])>0)
 l=m+1;
-else if(z<0)
+else if(c.compareTo(a[m])<0)
 u=m-1;
 else
 {
@@ -38,9 +27,8 @@ break;
 }
 }
 if(f==1)
-System.out.println("Element found at index"+m);
-
+System.out.println("No. is found at place "+(m+1));
 else
-System.out.println("Element not found");
+System.out.println("No. is not found");
 }
 }

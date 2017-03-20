@@ -1,27 +1,24 @@
 import java.io.*;
-public class binary_search
+class binary_search
 {
-public void func()throws IOException
+public static void main()throws IOException
 {
-int n,b,c,i,f=0,l=0,u=0,m=0;
-BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-System.out.println("Enter the limit");
-n=Integer.parseInt(br.readLine());
-u=n-1;
-int a[]=new int[n];
-for(i=0;i<n;i++)
-{
-System.out.println("Enter the no.");
-a[i]=Integer.parseInt(br.readLine());
-}
+int i,c,l=0,u,m=0,f=0;
+BufferedReader dr=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Enter limit of no.");
+u=Integer.parseInt(dr.readLine());
+int a[]=new int[u];
+System.out.println("Enter the no. in ascending order");
+for(i=0;i<u;i++)
+a[i]=Integer.parseInt(dr.readLine());
 System.out.println("Enter the no. to be searched");
-c=Integer.parseInt(br.readLine());
+c=Integer.parseInt(dr.readLine());
 while(l<=u)
 {
 m=(l+u)/2;
-if(a[m]<c)
+if(c>a[m])
 l=m+1;
-else if(a[m]>c)
+else if(c<a[m])
 u=m-1;
 else
 {
@@ -30,8 +27,8 @@ break;
 }
 }
 if(f==1)
-System.out.println("Element found at Index"+m);
+System.out.println("No. is found at index "+(m+1));
 else
-System.out.println("Element not found");
+System.out.println("No. is not found");
 }
 }

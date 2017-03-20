@@ -1,52 +1,21 @@
 import java.io.*;
-public class bill  
+class bill
 {
-	int n;
-	double amt;
-	
-	bill(String nn,String aa,String tt,int rr,int no)
-	{
-	super(nn,aa,tt,rr);
-	n=no;
-	amt=0.0;
-	}
-public void calc()
+public static void main()throws IOException
 {
-if(n>=1&&n<=100)
-amt=rent;
-else
-if(n>=101&&n<=200)
-amt=(n-100)*(0.60)+rent;
-else
-if(n>=201&&n<=300)
-amt=100*0.60+(n-200)*(0.80)+rent;
-else
-if(n>301)
-amt=(n-300)*1+rent;
+int e;
+double s=0;
+BufferedReader dr=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Enter the electricity consumed");
+e=Integer.parseInt(dr.readLine());
+if(e<=100)
+s=200;
+else if(e>100&&e<=300)
+s=((e-100)*1)+200;
+else if(e>300&&e<=500)
+s=(200*1)+((e-300)*1.55)+200;
+else if(e>500)
+s=(200*1)+(200*1.55)+((e-500)*2.10)+200;
+System.out.println("Total electricity consumed ="+s+"Rs");
 }
-void show()
-{
-super.disp();
-calc();
-System.out.println("amount is "+amt);
 }
-public static void main(String args[])throws IOException
-{
-InputStreamReader isr=new InputStreamReader(System.in);
-BufferedReader br=new BufferedReader(isr);
-System.out.println("name is ");
-	String nn=br.readLine();
-	System.out.println("addres is ");
-	String aa=br.readLine();
-	System.out.println("telphone is ");
-	String tt=br.readLine();
-	System.out.println("rent is ");
-	int rr=Integer.parseInt(br.readLine());
-	System.out.println("no. of call is ");
-	int no=Integer.parseInt(br.readLine());
-	bill b=new bill(nn,aa,tt,rr,no);
-	b.show();
-	}
-	}
-	
-	

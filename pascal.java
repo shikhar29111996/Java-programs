@@ -1,22 +1,22 @@
+import java.io.*;
 class pascal
 {
-public void get()
+public static void main()throws IOException
 {
-int i,b=0,c,d,x,y,z,j;
-int a[]=new int[10];
-for(i=0;i<=9;i++)
+BufferedReader dr=new BufferedReader(new InputStreamReader(System.in));;
+int i,j,n,a;
+System.out.println("Enter a number");
+n=Integer.parseInt(dr.readLine());
+int []p=new int [n];
+p[0]=1;
+a=n-1;
+for(i=0;i<n;i++)
 {
-b=a[i];
-for(j=0;j<=b;j++)
-{
-if(j<0)
-{
-x=a[j];
-y=a[j-1];
-z=x+y;
-System.out.println(z+" ");
-}
-}
+for(j=0;j<i;j++)
+System.out.print(p[j]+" ");
+for(j=i;j>=1;j--)
+p[j]=p[j]+p[j-1];
+System.out.println();
 }
 }
 }

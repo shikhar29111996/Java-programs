@@ -1,26 +1,26 @@
 class twin
 {
-public static void main()
+public void series()
 {
-int i,j,k,a,b,c=0,d=0,z;
-for(i=1;i<=100000;i++)
+int i,j,c=0,d=0,e,f;
+for(i=1;i<=100;i++)
 {
-a=i;
-b=i+2;
-c=0;
-d=0;
-for(j=1;j<=a;j++)
+e=i;
+for(j=1;j<=e;j++)
 {
-if(a%j==0)
+if(e%j==0)
 c++;
 }
-for(k=1;k<=b;k++)
+f=i+2;
+for(j=1;j<=f;j++)
 {
-if(b%k==0)
+if(f%j==0)
 d++;
 }
-if(c==2&&d==2)
-System.out.println(a+" "+b);
+if(d==2&&c==2)
+System.out.println(e+","+f);
+c=0;
+d=0;
 }
 }
 }
