@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=aa\ bb\ cc\ dd
+comment0.target=detail(java.lang.String,\ java.lang.String,\ int,\ int)
+comment1.params=
+comment1.target=void\ show()
+numComments=2
