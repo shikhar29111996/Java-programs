@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Dequeue()
+comment1.params=
+comment1.target=boolean\ isempty()
+comment2.params=r\ na
+comment2.target=void\ insert1(int,\ java.lang.String)
+comment3.params=r\ na
+comment3.target=void\ insert2(int,\ java.lang.String)
+comment4.params=
+comment4.target=void\ display()
+comment5.params=
+comment5.target=void\ delete1()
+comment6.params=
+comment6.target=void\ delete2()
+numComments=7

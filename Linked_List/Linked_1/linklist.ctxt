@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=linklist()
+comment1.params=
+comment1.target=boolean\ isempty()
+comment2.params=val
+comment2.target=void\ insert1(int)
+comment3.params=
+comment3.target=void\ display()
+comment4.params=val
+comment4.target=boolean\ delete(int)
+comment5.params=v
+comment5.target=void\ delete_1(int)
+comment6.params=v
+comment6.target=void\ search(int)
+comment7.params=
+comment7.target=void\ reverse()
+comment8.params=val
+comment8.target=void\ insert2(int)
+comment9.params=
+comment9.target=void\ merge()
+numComments=10
